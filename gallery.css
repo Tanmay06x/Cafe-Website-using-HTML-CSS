@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #3d2b1f;
+    font-family: "Poppins", sans-serif;
+}
+
+
+    nav{
+        position: relative;
+        color:  white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5vw;
+        font-weight: 500;
+        min-height: 64px;
+        height: auto;
+        
+    }
+
+    .cafename>h3>a{
+        color: inherit;    
+        text-decoration: none;
+    }
+    .cafename{
+        font-size: 20px;
+        color: rgb(205, 162, 121);
+    }
+
+    .secondnav .nav-items::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;          
+        height: 2px;         
+        background-color:  #e6d3b1;  
+        transition: width 0.3s ease-in-out;
+    
+    }
+
+    .secondnav .nav-items:hover::after {
+        width: 100%;          
+    }
+    .secondnav {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        font-size: 14px;
+        position: relative;
+        
+    }
+    .icon{
+        font-size: 1.2rem;
+        font-weight: 500;
+        display: none;
+    }
+    .secondnav .nav-items{
+        
+        cursor: pointer;    
+        transition: 0.5s;
+        position: relative;
+    }
+
+    .secondnav .nav-items:hover{
+        transform: translateY(-2px);
+        color:  #e6d3b1;
+        font-weight:300;
+    }
+
+    .secondnav .nav-items a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: inherit;     
+        text-decoration: none;
+    }
+
+    .secondnav .sign {
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        border: 1px solid white;
+        border-radius: 30px;
+        padding: 10px 25px;
+        background-color: transparent;
+        color: white;
+        font-weight: 500;
+        transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        cursor: pointer;
+    }
+
+    .secondnav .sign:hover {
+        transform: scale(1.1);
+        color: #e6d3b1;
+        border-color: #e6d3b1;
+        border: 1.4px solid #e6d3b1;
+    }
+
+    .secondnav .sign a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    header hr{
+        width: 97%;
+    }
+
+
+    @media (max-width: 992px) {
+
+    .icon {
+        display: block;
+        font-size: 2.8vh;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .cafename {
+        font-size: clamp(20px, 4vw, 32px);
+    }
+
+    .secondnav {
+        flex-direction: column;
+        position: absolute;
+        top: 11vh;      
+        left: 0;
+        width: 100%;
+        max-height: 0;      
+        overflow: hidden;  
+        padding: 0 0;       
+        gap: 1rem;
+        transition: max-height 0.4s ease-in-out, padding 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        pointer-events: none;
+        border-bottom: 1px solid white ;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(6px);
+        z-index: 1;
+    }
+
+    .secondnav.active {
+        max-height: 500px;  
+        padding: 1rem 0;    
+        opacity: 1;
+        pointer-events: auto;
+        border-bottom: 1px solid white ;
+    }
+
+    .secondnav .nav-items {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        color: white;
+        text-align: left;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .secondnav .nav-items:hover {
+        color: #e6d3b1;
+        transform: translateX(5px);
+    }
+
+    .tagline{
+        width: 100%;
+    }
+}
+
+
+
+.headline{
+    color: #b89b6a;
+    text-align: center;
+    padding: 40px 0;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+}
+
+
+.mainbox{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);   
+    grid-template-columns: repeat(4,1fr);
+    width: 85%;
+    gap: 25px;        
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+
+.box{
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.box:hover img {
+    transform: scale(1.02);
+    filter: brightness(0.9);
+}
+
+
+
+
+@media (max-width:768px){
+    .headline{
+        font-size: 1.6rem;
+    }
+    .mainbox{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    height: auto;
+    width: 85%;
+    gap: 25px;        
+    margin: auto;
+    margin-bottom: 80px;
+    
+    }
+}
+

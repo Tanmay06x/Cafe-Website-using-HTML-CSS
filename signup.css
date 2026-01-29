@@ -447,24 +447,12 @@ form {
 
 
 
+
+
+
+}
+
 @media screen and (max-width:500px){
-    .container{
-    position: relative;
-    height: 100vh;
-    top: 10%;
-}
-.form-box{
-    padding: 20px;
-    
-}
-.toggle-panel h1{
-    font-size: 20px;
-}
-
-
-}
-
-@media screen and (max-width:429px){
     .container{
     position: relative;
     height: 100vh;

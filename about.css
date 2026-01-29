@@ -181,6 +181,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     padding: 40px 5vw;  
+    overflow-x: hidden;
     
 }
 .abt-img >img{

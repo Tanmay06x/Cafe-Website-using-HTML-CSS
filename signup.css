@@ -464,7 +464,7 @@ form {
 
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:429px){
     .container{
     position: relative;
     height: 100vh;
